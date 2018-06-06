@@ -1,0 +1,6 @@
+framework module Pods_Artist_Top_Albums_iOS {
+  umbrella header "Pods-Artist_Top_Albums-iOS-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Artist_Top_Albums_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Music-Image" translatesAutoresizingMaskIntoConstraints="NO" id="ejo-bg-cKa">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VFi-v6-MoH">
+                                <rect key="frame" x="256" y="20" width="48" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="15"/>
+                                <state key="normal" title="Search">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.makesToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="bt_Search:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1PN-Xb-JS6"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Artist Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DyN-FU-nN1">
+                                <rect key="frame" x="16" y="20" width="232" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="172" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ki2-6F-jl6">
+                                <rect key="frame" x="0.0" y="58" width="320" height="422"/>
+                                <color key="backgroundColor" white="1" alpha="0.19881742294520549" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="172" id="DDg-GF-cSe" customClass="TVCell" customModule="Artist_Top_Albums_iOS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="172"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DDg-GF-cSe" id="yEZ-6g-Gf5">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="171.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="d4d-tA-Nh1">
+                                                    <rect key="frame" x="15" y="11" width="150" height="150"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="150" id="NhH-hK-A8K"/>
+                                                        <constraint firstAttribute="height" constant="150" id="UGI-ci-eIL"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Album Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yIV-7v-tdE">
+                                                    <rect key="frame" x="173" y="11" width="132" height="24"/>
+                                                    <fontDescription key="fontDescription" name="GurmukhiMN-Bold" family="Gurmukhi MN" pointSize="17"/>
+                                                    <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Playcount" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zom-FS-CKc">
+                                                    <rect key="frame" x="173" y="43" width="132" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist Name" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8PX-fx-fSb">
+                                                    <rect key="frame" x="173" y="136.5" width="132" height="24"/>
+                                                    <fontDescription key="fontDescription" name="GurmukhiMN" family="Gurmukhi MN" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="8PX-fx-fSb" secondAttribute="bottom" constant="11" id="7J0-XU-Xpu"/>
+                                                <constraint firstItem="zom-FS-CKc" firstAttribute="leading" secondItem="d4d-tA-Nh1" secondAttribute="trailing" constant="8" id="DN1-3M-Jyv"/>
+                                                <constraint firstItem="yIV-7v-tdE" firstAttribute="leading" secondItem="d4d-tA-Nh1" secondAttribute="trailing" constant="8" id="FoU-In-nA8"/>
+                                                <constraint firstItem="d4d-tA-Nh1" firstAttribute="leading" secondItem="yEZ-6g-Gf5" secondAttribute="leading" constant="15" id="dMy-XL-mjt"/>
+                                                <constraint firstItem="zom-FS-CKc" firstAttribute="top" secondItem="yIV-7v-tdE" secondAttribute="bottom" constant="8" id="de6-Nm-lhy"/>
+                                                <constraint firstItem="d4d-tA-Nh1" firstAttribute="top" secondItem="yEZ-6g-Gf5" secondAttribute="top" constant="11" id="gH6-fj-ztn"/>
+                                                <constraint firstItem="yIV-7v-tdE" firstAttribute="top" secondItem="yEZ-6g-Gf5" secondAttribute="top" constant="11" id="ggH-pc-MUn"/>
+                                                <constraint firstAttribute="trailing" secondItem="zom-FS-CKc" secondAttribute="trailing" constant="15" id="iA3-C6-K9j"/>
+                                                <constraint firstAttribute="trailing" secondItem="8PX-fx-fSb" secondAttribute="trailing" constant="15" id="kz4-u8-vP5"/>
+                                                <constraint firstAttribute="trailing" secondItem="yIV-7v-tdE" secondAttribute="trailing" constant="15" id="thL-tm-uSf"/>
+                                                <constraint firstItem="8PX-fx-fSb" firstAttribute="leading" secondItem="d4d-tA-Nh1" secondAttribute="trailing" constant="8" id="vvZ-5U-bEK"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.makesToBounds" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="iv_Album" destination="d4d-tA-Nh1" id="czz-ra-mIG"/>
+                                            <outlet property="la_AlbumName" destination="yIV-7v-tdE" id="V1c-wS-JLT"/>
+                                            <outlet property="la_ArtistName" destination="8PX-fx-fSb" id="Oc2-ZS-lXI"/>
+                                            <outlet property="la_Playcount" destination="zom-FS-CKc" id="q4x-fk-p5y"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Ki2-6F-jl6" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="5y1-hg-gNr"/>
+                            <constraint firstItem="Ki2-6F-jl6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6UI-VD-wBL"/>
+                            <constraint firstItem="ejo-bg-cKa" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="C4v-Iz-oRR"/>
+                            <constraint firstItem="Ki2-6F-jl6" firstAttribute="top" secondItem="VFi-v6-MoH" secondAttribute="bottom" constant="8" id="OZS-q5-7tj"/>
+                            <constraint firstItem="Ki2-6F-jl6" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="bt6-Fy-1ER"/>
+                            <constraint firstItem="ejo-bg-cKa" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="cTg-aV-gKc"/>
+                            <constraint firstItem="ejo-bg-cKa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dST-7D-kos"/>
+                            <constraint firstItem="VFi-v6-MoH" firstAttribute="leading" secondItem="DyN-FU-nN1" secondAttribute="trailing" constant="8" id="dyg-zJ-oyD"/>
+                            <constraint firstItem="VFi-v6-MoH" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" id="hp7-gR-PxQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VFi-v6-MoH" secondAttribute="trailing" constant="16" id="kL2-NQ-gab"/>
+                            <constraint firstItem="DyN-FU-nN1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="ruC-QR-QeL"/>
+                            <constraint firstItem="ejo-bg-cKa" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="vNU-4l-e44"/>
+                            <constraint firstItem="DyN-FU-nN1" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" id="xyK-nY-VhA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="tf_ArtistName" destination="DyN-FU-nN1" id="KJv-1o-qqU"/>
+                        <outlet property="tv_AlbumsList" destination="Ki2-6F-jl6" id="WGo-ql-Pu6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-538.125" y="113.75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Music-Image" width="1080" height="1920"/>
+        <image name="Placeholder" width="500" height="500"/>
+    </resources>
+</document>
